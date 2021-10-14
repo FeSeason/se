@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "moduleResolution": "Node",
+    "allowJs": false,
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+      // "@components/*": [
+      //   "src/components/*"
+      // ],
+      // "@pages/*": [
+      //   "src/pages/*"
+      // ],
+      // "@hooks/*": [
+      //   "src/hooks/*"
+      // ],
+      // "@assets/*": [
+      //   "src/assets/*"
+      // ],
+      // "@utils/*": [
+      //   "src/utils/*"
+      // ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "config/**",
+    "node_modules/**"
+  ]
+}

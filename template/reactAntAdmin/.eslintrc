@@ -1,0 +1,38 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"plugins": [
+		"@typescript-eslint",
+		"react",
+		"react-hooks"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"allowImportExportEverywhere": true,
+		"sourceType": "module"
+	},
+	"rules": {
+		"react/prop-types": "off",
+		"indent": ["error", 2],
+		"semi": "error",
+		"quotes": [1, "single"],
+		"space-before-function-paren": "error",
+		"space-before-blocks": "error",
+		"no-unused-expressions": "error",
+		"one-var-declaration-per-line": ["error", "always"],
+
+		"object-curly-spacing": ["error", "always"]
+		// "array-curly-spacing": ["error", "always"]
+	}
+}

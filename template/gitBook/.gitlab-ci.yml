@@ -1,0 +1,46 @@
+variables:
+  STATIC: "/ci-data1/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+  STATIC_FAT: "/ci-data/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME-fat"
+  STATIC_UAT: "/ci-data/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME-uat"
+  DEVELOP_STATIC: "/ci-data/fe-statics-fat/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+  OUTPUT_FOLDER: "_book"
+
+before_script:
+  - node -v
+  - npm -v
+  - gitbook --version
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - solar-group
+
+  script:
+    - pwd
+    - gitbook install
+    - gitbook build
+
+  artifacts:
+    untracked: true
+    expire_in: 10 mins
+    paths:
+      - $OUTPUT_FOLDER
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  tags:
+    - solar-group
+
+  script:
+    - echo deploy fat
+    - rm -rf $STATIC_FAT
+    - cp -r $OUTPUT_FOLDER $STATIC_FAT
+
+  only:
+    - master

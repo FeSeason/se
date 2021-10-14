@@ -1,0 +1,65 @@
+{
+  "gitbook": "3.x.x",
+  "title": "xxx-文档",
+  "description": "xxxxxx-xxx",
+  "author": "ins",
+  "language": "zh-hans",
+  "root": ".",
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-pro",
+    "autotheme",
+    "insert-logo",
+    "advanced-emoji",
+    "tbfed-pagefooter",
+    "back-to-top-button",
+    "chapter-fold",
+    "expandable-chapters-small",
+    "code",
+    "todo",
+    "page-toc-button",
+    "pageview-count",
+    "auto-scroll-table",
+    "popup",
+    "lightbox",
+    "custom-favicon",
+    "hide-element"
+  ],
+  "pluginsConfig": {
+    "favicon": "./favicon.ico",
+    "theme-default": {
+			"showLevel": false
+    },
+    "autotheme": {
+			"white": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+			"sepia": [],
+			"night": [20, 21, 22, 23, 0, 1, 2, 3, 4, 5]
+    },
+    "insert-logo": {
+      "url": "logo url 地址",
+      "style": "height: 38px"
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy xxxxxx 2020",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
+    },
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    }
+  },
+  "links": {
+      "sidebar": {
+        "百度": "https://www.baidu.com/",
+        "github": "https://github.com"
+    }
+  }
+}
