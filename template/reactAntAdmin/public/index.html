@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% if (process.env.NODE_ENV === 'production') { %>
+      <script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+      <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <% } %>
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.2/umd/react.<%= process.env.NODE_ENV === 'production' ? 'production.min' : 'development'  %>.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.2/umd/react-dom.<%= process.env.NODE_ENV === 'production' ? 'production.min' : 'development'  %>.js"></script> -->
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

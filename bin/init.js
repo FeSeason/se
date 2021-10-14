@@ -7,7 +7,6 @@ const logger = require('../lib/log');
 const init = require('../lib/init');
 const { version } = require('../package.json');
 const { templates } = require('../config');
-const argv = process.argv;
 
 const initFn = () => {
   logger.warn(`
@@ -44,7 +43,6 @@ const initFn = () => {
       .then(({
         projectName,
         templateName,
-        type,
       }) => {
         project = project || projectName
 
