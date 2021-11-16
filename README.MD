@@ -5,7 +5,7 @@
 | 模板 | 描述 |
 |---|---|
 | gitBook | 用于文档部署，sdk 使用文档，博客等 |
-| reactAntAdmin | TS REACT HOOK ANT 管理后台模板
+| reactAntAdmin | TS REACT HOOK ANT 管理后台模板。
 
 ### STEP 0
 
